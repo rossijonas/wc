@@ -1,4 +1,4 @@
-<h1 align="center">virt-lab-creator</h1>
+<h1 align="center">wc (word counter)</h1>
 
 *<p align="center">Basic CLI word counter App built with Go</p>*
 

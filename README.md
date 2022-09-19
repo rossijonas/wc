@@ -6,7 +6,7 @@
 
 This is an exercise from the book _Powerful Command-Line Applications in Go_.
 
-This is a simple command-line tool that reads STDIN and count words, lines or bytes.
+This is a simple command-line tool that reads STDIN and counts words, lines, or bytes.
 
 ## Usage
 

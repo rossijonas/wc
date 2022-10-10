@@ -42,7 +42,7 @@ func TestCountBytes(t *testing.T) {
 func TestReadFile(t *testing.T) {
 	b := bytes.NewBufferString("")
 	exp := 5
-	res := count(b, "textfile.txt", false, false)
+	res := count(b, "testdata/testfile.txt", false, false)
 
 	if res != exp {
 		t.Errorf("Expected %d, got %d instead.\n", exp, res)

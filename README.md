@@ -1,36 +1,80 @@
-<h1 align="center">wc (word counter)</h1>
+<h1 align="center">wc (Word Counter)</h1>
 
-*<p align="center">Basic CLI word counter App built with Go</p>*
+*<p align="center">A Simple Word Counter for the CLI.</p>*
 
 ## About
 
-This is an exercise from the book _Powerful Command-Line Applications in Go_.
+`wc` reads STDIN and counts words, lines, or bytes.
 
-It's a simple command-line tool that reads STDIN and counts words, lines, or bytes.
+### Status:
+
+[![Actions Status](https://github.com/rossijonas/wc/workflows/Test/badge.svg)](https://github.com/rossijonas/wc/actions)
+[![Actions Status](https://github.com/rossijonas/wc/workflows/Build/badge.svg)](https://github.com/rossijonas/wc/actions)
+
+### Features:
+
+- Cross platform:  Linux / Macos / Windows.
+
+- Counts words or bytes from an input in STDIN.
+
+_(This is an exercise from the book "Powerful Command-Line Applications in Go".)_
+
+## Installation
+
+### Requirements:
+
+- [Go](https://go.dev/) version 1.18.6 (or above)
+
+### How to install:
+
+- Run: 
+
+  ```
+  $ go install github.com/rossijonas/wc@latest
+  ```
 
 ## Usage
 
-Pipe text to `wc` command, it returns the number of words by default.
-
-Using flags to modify the counter:
-
-- `-l` - count lines
-- `-b` - count bytes
+### Options:
 
 ```
-# Count words:
+$ wc -h
+Usage of wc:
+  -b    Count bytes
+  -l    Count lines
+```
+
+### Examples:
+
+Pipe text to `wc` command, it returns the number of words by default.
+
+#### Count words:
+
+```
 $ echo "two words" | ./wc
 2 # result
 ```
 
+#### Count lines using `-l` flag:
+
 ```
-# Count lines using -l flag:
 $ cat main.go | ./wc -l
 32 # result
 ```
 
+#### Count bytes using `-b` flag:
+
 ```
-# Count bytes using -b flag:
 $ echo "lala" | ./wc -b
 5 # result
 ```
+
+## Backlog
+
+- Add cover image to README file.
+
+- Support reading files from files in addition to STDIN.
+
+- Support accepting multiple files.
+
+

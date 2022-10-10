@@ -73,7 +73,7 @@ $ echo "lala" | ./wc -b
 
 - Add cover image to README file.
 
-- Support reading files from files in addition to STDIN.
+- ~~Support reading input from files in addition to STDIN.~~
 
 - Support accepting multiple files.
 

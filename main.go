@@ -5,11 +5,24 @@ import (
 	"flag"
 	"fmt"
 	"io"
+	"log"
 	"os"
 )
 
-func count(r io.Reader, countLines bool, countBytes bool) int {
-	scanner := bufio.NewScanner(r)
+func count(stdin io.Reader, filename string, countLines bool, countBytes bool) int {
+	var scanner *bufio.Scanner
+	if filename == "" {
+		scanner = bufio.NewScanner(stdin)
+	} else {
+		file, err := os.Open(filename)
+		if err != nil {
+			log.Fatal(err)
+			os.Exit(1)
+		}
+		defer file.Close()
+		scanner = bufio.NewScanner(file)
+	}
+
 	wc := 0
 	if countBytes {
 		scanner.Split(bufio.ScanBytes)
@@ -29,6 +42,8 @@ func count(r io.Reader, countLines bool, countBytes bool) int {
 func main() {
 	lines := flag.Bool("l", false, "Count lines")
 	bytes := flag.Bool("b", false, "Count bytes")
+	filename := flag.String("f", "", "Read input from file")
 	flag.Parse()
-	fmt.Println(count(os.Stdin, *lines, *bytes))
+
+	fmt.Println(count(os.Stdin, *filename, *lines, *bytes))
 }

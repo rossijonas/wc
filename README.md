@@ -15,7 +15,7 @@
 
 - Cross platform:  Linux / Macos / Windows.
 
-- Counts words or bytes from an input in STDIN.
+- Counts words, lines or bytes from an input in STDIN.
 
 _(This is an exercise from the book "Powerful Command-Line Applications in Go".)_
 

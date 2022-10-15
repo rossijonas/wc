@@ -17,8 +17,6 @@
 
 - Counts words, lines or bytes from an input in STDIN.
 
-_(This is an exercise from the book "Powerful Command-Line Applications in Go".)_
-
 ## Installation
 
 ### Requirements:
@@ -73,8 +71,8 @@ $ echo "lala" | ./wc -b
 
 - Add cover image to README file.
 
-- ~~Support reading input from files in addition to STDIN.~~
-
 - Support accepting multiple files.
 
+## Credits
 
+_This is an exercise from the book "Powerful Command-Line Applications in Go", but it may differ from the original exercise._
